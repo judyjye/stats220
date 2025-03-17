@@ -13,6 +13,6 @@ A meme that captures how I currently feel about my university studies is ![](htt
 [*Click here for random websites*](https://theuselessweb.com/)
 
 
-* [](https://c.tenor.com/ELIZncqmA1gAAAAd/tenor.gif)
-* [](https://c.tenor.com/oiiF1L5rIdYAAAAC/tenor.gif)
-* [](https://c.tenor.com/yfl5KCN5cvgAAAAC/tenor.gif)
+* ![](https://c.tenor.com/ELIZncqmA1gAAAAd/tenor.gif)
+* ![](https://c.tenor.com/oiiF1L5rIdYAAAAC/tenor.gif)
+* ![](https://c.tenor.com/yfl5KCN5cvgAAAAC/tenor.gif)
