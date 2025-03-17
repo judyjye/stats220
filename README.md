@@ -10,7 +10,9 @@ A little about me:
 
 A meme that captures how I currently feel about my university studies is ![](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
 
-[Click here for random websites](https://theuselessweb.com/)
+[*Click here for random websites*](https://theuselessweb.com/)
 
-* [](https://media1.tenor.com/m/ELIZncqmA1gAAAAd/buenas-noches.gif)
 
+* [](https://c.tenor.com/ELIZncqmA1gAAAAd/tenor.gif)
+* [](https://c.tenor.com/oiiF1L5rIdYAAAAC/tenor.gif)
+* [](https://c.tenor.com/yfl5KCN5cvgAAAAC/tenor.gif)
