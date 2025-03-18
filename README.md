@@ -17,8 +17,3 @@ Some things I enjoy doing in my spare time are:
 * ![](https://c.tenor.com/oiiF1L5rIdYAAAAC/tenor.gif)
 * ![](https://c.tenor.com/yfl5KCN5cvgAAAAC/tenor.gif)
 
-```
-h1{color: #D6D9FF
-}
-
-```
