@@ -79,5 +79,4 @@ paste("A sweet treat was eaten after", sweet_treat_amount, "meals out of", meals
 
 ```
 
-A sweet treat was eaten after `r sweet_treat_amount` meals out of `r meals_amount` meals.
 
