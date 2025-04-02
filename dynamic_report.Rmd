@@ -74,8 +74,10 @@ sweet_treat_amount <- latest_data %>%
   count()
 
 meals_amount <- latest_data$sweet_treat %>% length()
+
+paste("A sweet treat was eaten after", sweet_treat_amount, "meals out of", meals_amount, "meals.")
+
 ```
 
-A sweet treat was eaten after `r sweet_treat_amount` meals out of `r meals_amount` a total of meals.
-
+A sweet treat was eaten after `r sweet_treat_amount` meals out of `r meals_amount` meals.
 
