@@ -1,0 +1,81 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body{background-color: #CEADF5
+}
+h2{color: #5F0812;
+font-weight: bold;
+background-color: #D6D9FF;
+padding: 10px
+}
+
+```
+
+## Dynamic report for meals eaten throughout the week
+
+The data is for observed meals over the course of a week and analyses variables such as the type of meal eaten and ratings. 
+The data aims to investigate how often meals were prepared in different ways out of cooking, leftovers or buying food. The data also looks at the average enjoyment of meals and whether this affects if a sweet treat is eaten after the meal. 
+
+```{r}
+library(tidyverse)
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTckwxvhe1k2mtVp-AlHOCrbfSkVF1mLmuq-cQhB5DrPphsPM6ys6TLXRAUOvzm5lHPTOLBoBdw1-5W/pub?output=csv")
+
+latest_data <- logged_data %>%
+  rename( meal_type = 2,
+        rating = 3,
+        sweet_treat = 4,
+        time = 5,
+        meal = 6,
+        meat_type = 7 )
+average_rating <- latest_data$rating %>% mean() %>% round(2)
+
+# bar chart 1
+ggplot(data = latest_data) +
+  geom_bar(aes(x = meal_type), fill = "#2F56E4") +
+  labs(title = "Meal type", 
+    x = "How the meal was prepared")
+
+leftovers_amount <- latest_data %>% 
+  filter(str_detect(meal_type, "leftovers")) %>%
+  count()
+
+paste("The amount of times leftovers have been eaten is", leftovers_amount)
+
+paste("The rating of the highest rated meal is", max(latest_data$rating), "out of 10.")
+
+# bar chart 2 
+ggplot(data = latest_data) +
+  geom_bar(aes(x = rating, fill = sweet_treat)) +
+  labs(title = "Rating vs whether or not dessert was eaten")
+
+leftovers_amount <- latest_data %>% 
+  filter(str_detect(meal_type, "leftovers")) %>%
+  count()
+
+```
+
+With a scale of 1 being the worst and 10 being the best, the average rating for meals eaten is `r average_rating` out of 10. 
+
+```{r latest_data}
+ggplot(data = latest_data) +
+  geom_bar(aes(x = sweet_treat), fill = "#5A22A2") +
+  labs(title = "Did you have a sweet treat after your meal?")
+
+sweet_treat_amount <- latest_data %>% 
+  filter(str_detect(sweet_treat, "yes of course")) %>%
+  count()
+
+meals_amount <- latest_data$sweet_treat %>% length()
+```
+
+A sweet treat was eaten after `r sweet_treat_amount` meals out of `r meals_amount` a total of meals.
+
+
